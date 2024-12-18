@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Attēls ar tekstu pa kreisi-->
+      <div class="image" id="image">
+        <p class="header">Esi sveicināts ĶLUS</p>
+        <hr class="line" />
+        <p class="text">Tavas laboratorijas uzskaites sistēma</p>
+        <img src="assets/images/rb_13532.png" alt="" />
+      </div>
+
+      <!-- Galvēnā lapa pa labi -->
+      <div class="main-page" id="main-page">
+        <p class="header">Ko tu vēlies darīt šodien?</p>
+        <p class="text">
+          Piekļūsti savas skolas laboratorijai vai aplūku publiski pieejamo
+          informāciju un datus par laboratoriju
+        </p>
+        <div>
+          <button
+            class="login-button"
+            onclick="hideElement('main-page', 'login-page')"
+          >
+            Pieslēgties
+          </button>
+          <button
+            class="database-button"
+            onclick="hideElements('image', 'main-page', 'database')"
+          >
+            Piekļūt visiem publiskiem datiem
+          </button>
+        </div>
+
+        <div class="container">
+          <div class="error-btn-holder">
+            <div class="error-wrapper">
+              <button class="error-button">Ziņot par kļūdu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Login lapa pa labi-->
+      <div class="login-page" id="login-page">
+        <div class="back-wrapper">
+          <a href="#" onclick="hideElement('login-page', 'main-page')"
+            ><p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-left"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+                />
+              </svg>
+              Atpakaļ uz sākumlapu
+            </p></a
+          >
+        </div>
+
+        <p class="header">Pieslēgties</p>
+        <p class="text">Kīmijas laboratorijas uzskaites sistēmai</p>
+        <form action="">
+          <label for="username">Lietotājvārds</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Ievadīt lietotājvārdu"
+          />
+          <label for="username">Parole</label>
+
+          <input type="text" id="password" placeholder="Ievadīt paroli" />
+
+          <button class="login-button">Pieslēgties</button>
+        </form>
+
+        <hr />
+
+        <p>Neesi vēl reģistrēts? <a href="#">Izveidot profilu</a></p>
+        <div class="container">
+          <div class="error-btn-holder">
+            <div class="error-wrapper">
+              <button class="error-button">Ziņot par kļūdu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Datubāzes lapa pa labi-->
+      <div class="database" id="database">
+        <div class="back-wrapper">
+          <a href="#" onclick="showElements('database', 'image', 'main-page')"
+            ><p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-left"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+                />
+              </svg>
+              Atpakaļ uz sākumlapu
+            </p></a
+          >
+          <p class="header">Publiskā datubāze</p>
+          <p class="text">
+            Šajā datubāzē Tu vari apskatīt pieejamās vielas un aprīkojumu
+          </p>
+          <div>
+            <input type="text" placeholder="Search" />
+            <button class="show-all-btn">Rādīt visu</button>
+            <button class="show-material-btn">Rādīt vielas</button>
+            <button class="show-equipment-btn">Rādīt aprīkojumu</button>
+          </div>
+
+          <hr />
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nosaukums</th>
+                <th>Tips</th>
+                <th>Apakštips</th>
+                <th>Skaits</th>
+                <th>Svars</th>
+                <th>Komentāri</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>KL1042724</td>
+                <td>Katalizators</td>
+                <td>Aprīkojums</td>
+                <td>Trauks</td>
+                <td>23</td>
+                <td></td>
+                <td>Daži komentāri</td>
+              </tr>
+              <tr>
+                <td>KL1042723</td>
+                <td>Birete</td>
+                <td>Aprīkojums</td>
+                <td>Trauks</td>
+                <td>20</td>
+                <td></td>
+                <td>Daži komentāri</td>
+              </tr>
+              <tr>
+                <td>KL1042742</td>
+                <td>HCI</td>
+                <td>Viela</td>
+                <td>Skābe</td>
+                <td>20</td>
+                <td>40</td>
+                <td>Daži komentāri</td>
+              </tr>
+              <tr>
+                <td>KL1042724</td>
+                <td>Kolba</td>
+                <td>Aprīkojums</td>
+                <td>Trauks</td>
+                <td>20</td>
+                <td></td>
+                <td>Daži komentāri</td>
+              </tr>
+              <tr>
+                <td>KL1042734</td>
+                <td>Fe</td>
+                <td>Viela</td>
+                <td>Metāls</td>
+                <td>48</td>
+                <td>10</td>
+                <td>Daži komentāri</td>
+              </tr>
+              <tr>
+                <td>KL1042721</td>
+                <td>Fe</td>
+                <td>Viela</td>
+                <td>Metāls</td>
+                <td>20</td>
+                <td>20</td>
+                <td>Daži komentāri</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="container">
+          <div class="error-btn-holder">
+            <div class="error-wrapper">
+              <button class="error-button">Ziņot par kļūdu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="assets/js/script.js"></script>
+</html>

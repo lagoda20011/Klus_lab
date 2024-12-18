@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Globālie iestatījumi */
+body {
+  font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+button {
+  font-family: "Poppins", serif;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Attēla sadaļa ar tekstu */
+.image {
+  flex: 1;
+  background-image: linear-gradient(#0056b3, #007bff);
+  /* background: url("assets/images/lab-background.jpg") no-repeat center center; */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.image .header {
+  font-size: 3.5rem;
+  margin: 0 0 50px 0;
+}
+
+.image .line {
+  width: 200px;
+  margin: 0 0 50px 0;
+  border: 1px solid #fff;
+}
+
+.image .text {
+  font-weight: 200;
+  margin: 0 0 70px 0;
+}
+
+.image img {
+  width: 250px;
+  bottom: 10px;
+}
+
+/* Galvenās lapas sadaļa */
+.main-page,
+.login-page {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 70px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.database {
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 70px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-page p.header {
+  font-size: 3.5rem;
+  color: #007bff;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+.main-page p.text {
+  font-size: 0.9rem;
+  color: grey;
+  align-items: start;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.login-button {
+  padding: 7px 20px;
+  font-size: 0.8rem;
+  border: 1px #007bff solid;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.database-button {
+  margin: 5px;
+  margin-left: 15px;
+  padding: 7px 20px;
+  border: 1px solid #007bff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background-color: #fff;
+  color: #007bff;
+  border-color: 1px #007bff solid;
+  transition: background-color 0.3s ease;
+}
+
+.database-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #fff;
+}
+
+.container {
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.container .error-btn-holder {
+  height: 100%;
+  justify-content: end;
+  align-items: flex-end;
+  display: flex;
+}
+
+.error-wrapper .error-button {
+  padding: 7px 20px;
+  font-size: 0.8rem;
+  border: 1px #ff8585 solid;
+  cursor: pointer;
+  background-color: #ff8585;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.error-wrapper .error-button:hover {
+  background-color: #fd5959;
+  border-color: #fd5959;
+}
+
+/* Login lapas sadaļa */
+.login-page {
+  display: none;
+}
+
+.back-wrapper {
+  width: 100%;
+}
+
+.back-wrapper a {
+  text-decoration: none;
+}
+
+.back-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.back-wrapper a p {
+  color: #333;
+  font-weight: bolder;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.login-page p.header {
+  font-size: 3.5rem;
+  color: #007bff;
+  align-items: start;
+  margin-bottom: 10px;
+}
+
+.login-page p.text {
+  font-size: 1.5rem;
+  color: grey;
+  align-items: start;
+  margin-bottom: 70px;
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: small;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 120%;
+  margin-bottom: 20px;
+}
+
+.login-page .login-button {
+  margin-top: 10px;
+  width: 60%;
+  margin-bottom: 25px;
+}
+
+.login-page hr {
+  width: 100%;
+  border: 1px solid lightgray;
+}
+
+.login-page p {
+  font-size: 0.9rem;
+  color: grey;
+  align-items: start;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.login-page p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-page p a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Datubāzes lapas sadaļa */
+.database {
+  display: none;
+  width: 100%;
+}
+
+.database .header {
+  font-size: 3.5rem;
+  color: #007bff;
+  align-items: start;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.database .text {
+  font-size: 1.2rem;
+  color: grey;
+  align-items: start;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.database input[type="text"] {
+  width: 30%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  font-size: 12px;
+  background-color: white;
+  background-image: url("https://icons.veryicon.com/png/o/miscellaneous/big-data-regular-monochrome-icon/search-893.png");
+  background-position: 5px 3px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding: 6px 20px 6px 30px;
+}
+
+.database button {
+  padding: 6px 12px 6px 12px;
+  border-radius: 50px;
+  border: none;
+}
+
+.database .show-all-btn {
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.database .show-all-btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.database .show-material-btn,
+.database .show-equipment-btn {
+  border: 1px #007bff solid;
+  background-color: #fff;
+  color: #007bff;
+  transition: background-color 0.3s ease;
+}
+
+.database .show-material-btn:hover,
+.database .show-equipment-btn:hover {
+  border: 1px #0056b3 solid;
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.database table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  font-family: Arial, sans-serif;
+}
+
+.database th,
+.database td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.database td {
+  border-bottom: 10px solid #f1f1f1;
+}
+
+.database th {
+  background-color: #272c46;
+  color: #fff;
+}
+
+.database tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.database tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.database td {
+  text-align: center;
+}
+
+.database th {
+  font-weight: bold;
+}
+
+/* Optional: Style the first column (ID) */
+.database td:last-child,
+.database th:last-child {
+  text-align: start;
+  width: 120px;
+}
+
+/* Style for empty cells */
+.database td:empty {
+  background-color: #f9f9f9;
+}
+
+.database .error-button {
+  padding: 7px 20px;
+  border-radius: 0;
+  border: none;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .image {
+    height: 50vh;
+  }
+}
